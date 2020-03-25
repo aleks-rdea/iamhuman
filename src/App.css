@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+html,
+body {
+  font-family: "Centra No1", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  padding: 4vw 8vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.columns {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+}
+
+.columns.two .column {
+  width: 50%;
+}
+
+.summary {
+  text-align: right;
+}
+
+.summary ul,
+.summary dl {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.summary dt {
+  font-weight: bold;
+}
+
+ul.actions {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 24px;
+}
+
+ul.actions .button {
+  margin-left: 8px;
+}
+
+.button {
+  display: block;
+  background: black;
   color: white;
+  padding: 12px 16px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button.secondary {
+  background: #e6e6e6;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 128px;
+  font-weight: bold;
+  letter-spacing: -0.5rem;
+  margin: 0 0 96px;
+  line-height: 112px;
+}
+
+h2 {
+  font-size: 48px;
+  letter-spacing: -0.15rem;
+  color: #ccc;
+}
+
+p.large {
+  font-size: 24px;
+  margin: 0 0 128px;
+  width: 50%;
+  max-width: 480px;
+}
+
+ul.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.cards li {
+  display: flex;
+  align-items: center;
+  margin: 0 16px 16px 0;
+  padding: 16px;
+  box-sizing: border-box;
+  width: calc((100% - 32px) / 3);
+  height: 128px;
+  background: #f2f2f2;
+  border-radius: 12px;
+}
+
+ul.cards li:nth-child(3n) {
+  margin-right: 0;
+}
+
+ul.cards li .face {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+ul.cards li dl {
+  margin-left: 16px;
+  text-align: left;
+}
+
+ul.cards li dt {
+  font-weight: bold;
+}
+
+ul.cards li dd {
+  margin: 0;
+  color: #7f7f7f;
 }
